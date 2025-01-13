@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const inputText = document.getElementById("input-text");
+const inputText = document.getElementById("input-text");
 const listContainer = document.getElementById("list-container");
 
 function addTask(){
@@ -42,5 +42,7 @@ function showToDoList() {
 if (typeof window !== "undefined") {
     showToDoList();
 }
+
+addButton.addEventListener('click', addTask);
 
 });
