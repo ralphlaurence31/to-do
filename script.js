@@ -23,12 +23,20 @@ listContainer.addEventListener("click", function(e){
     }
 }, false);
 
-function saveList(){
-    localStorage.setItem("datas",listContainer.innerHTML);
+function saveList() {
+    if (typeof window !== "undefined") {
+        localStorage.setItem("datas", listContainer.innerHTML);
+    }
 }
 
-function showToDoList(){
-    listContainer.innerHTML = localStorage.getItem("datas");
+function showToDoList() {
+    if (typeof window !== "undefined") {
+        listContainer.innerHTML = localStorage.getItem("datas") || '';  // Fallback if no data
+    }
 }
-showToDoList();
+
+// Call showToDoList when the page loads
+if (typeof window !== "undefined") {
+    showToDoList();
+}
 
