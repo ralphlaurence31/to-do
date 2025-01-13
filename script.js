@@ -1,4 +1,6 @@
-const inputText = document.getElementById("input-text");
+document.addEventListener('DOMContentLoaded', function() {
+
+    const inputText = document.getElementById("input-text");
 const listContainer = document.getElementById("list-container");
 
 function addTask(){
@@ -40,3 +42,4 @@ if (typeof window !== "undefined") {
     showToDoList();
 }
 
+});
